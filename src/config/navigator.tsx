@@ -1,11 +1,11 @@
 import React, { ReactElement } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { HomeScreen, GameScreen } from "@screens";
+import { HomeScreen, SinglePlayerGame } from "@screens";
 
 export type StackNavigatorParams = {
     homeScreen: undefined;
-    gameScreen: { gameId: string };
+    SinglePlayerGame: { gameId: number };
 };
 
 const Stack = createStackNavigator<StackNavigatorParams>();
@@ -13,9 +13,9 @@ const Stack = createStackNavigator<StackNavigatorParams>();
 export default function Navigator(): ReactElement {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="homeScreen" component={HomeScreen} />
-                <Stack.Screen name="gameScreen" component={GameScreen} />
+                <Stack.Screen name="SinglePlayerGame" component={SinglePlayerGame} />
             </Stack.Navigator>
         </NavigationContainer>
     );

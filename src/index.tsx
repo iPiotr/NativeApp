@@ -1,5 +1,4 @@
 import React, { ReactElement } from "react";
-import { StyleSheet, View } from "react-native";
 import { AppBootstrap } from "@components";
 import Navigator from "@config/navigator";
 
