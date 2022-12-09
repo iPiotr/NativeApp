@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
         left: 30,
         right: 30,
         padding: 30,
-        borderWidth: 2,
         borderRadius: 20
     },
     modalTitle: {
@@ -49,6 +48,16 @@ const styles = StyleSheet.create({
         fontSize: 28,
         textAlign: "center",
         marginBottom: 10
+    },
+    shadow: {
+        shadowColor: colors.black,
+        shadowOffset: {
+            width: 0,
+            height: 4
+        },
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+        elevation: 12
     }
 });
 

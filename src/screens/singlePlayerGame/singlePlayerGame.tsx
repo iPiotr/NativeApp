@@ -98,16 +98,16 @@ export default function Game(): ReactElement {
                 <View>
                     <AppText style={styles.difficulty}>Difficulty: Hard</AppText>
                     <View style={styles.results}>
-                        <View style={styles.resultsBox}>
-                            <AppText style={styles.resultsTitle}>Wins</AppText>
+                        <View style={[styles.resultsBox, styles.shadow]}>
+                            <AppText style={[styles.resultsTitle, styles.shadow]}>Wins</AppText>
                             <AppText style={styles.resultsCount}>{gamesCount.wins}</AppText>
                         </View>
-                        <View style={styles.resultsBox}>
-                            <AppText style={styles.resultsTitle}>Draws</AppText>
+                        <View style={[styles.resultsBox, styles.shadow]}>
+                            <AppText style={[styles.resultsTitle, styles.shadow]}>Draws</AppText>
                             <AppText style={styles.resultsCount}>{gamesCount.draws}</AppText>
                         </View>
-                        <View style={styles.resultsBox}>
-                            <AppText style={styles.resultsTitle}>Losses</AppText>
+                        <View style={[styles.resultsBox, styles.shadow]}>
+                            <AppText style={[styles.resultsTitle, styles.shadow]}>Losses</AppText>
                             <AppText style={styles.resultsCount}>{gamesCount.loses}</AppText>
                         </View>
                     </View>
@@ -122,7 +122,7 @@ export default function Game(): ReactElement {
                     size={SCREEN_WIDTH - 60}
                 />
                 {gameResult && (
-                    <View style={styles.modal}>
+                    <View style={[styles.modal, styles.shadow]}>
                         <AppText style={styles.modalTitle}>
                             {getWinner(gameResult.winner) === "PLAYER" && "You Win!"}
                             {getWinner(gameResult.winner) === "AI" && "You Lose!"}
