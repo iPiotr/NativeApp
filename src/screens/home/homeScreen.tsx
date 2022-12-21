@@ -6,7 +6,7 @@ import { GradientBackground, Button } from "@components";
 import styles from "./styles";
 
 type HomeProps = {
-    navigation: StackNavigationProp<StackNavigatorParams, "homeScreen">;
+    navigation: StackNavigationProp<StackNavigatorParams, "Home">;
 };
 
 export default function Home({ navigation }: HomeProps) {
@@ -23,7 +23,13 @@ export default function Home({ navigation }: HomeProps) {
                         title="Single Player"
                     />
                     <Button style={styles.button} title="Multiplayer" />
-                    <Button style={styles.button} title="Settings" />
+                    <Button
+                        onPress={() => {
+                            navigation.navigate("Settings");
+                        }}
+                        style={styles.button}
+                        title="Settings"
+                    />
                 </View>
             </ScrollView>
         </GradientBackground>
