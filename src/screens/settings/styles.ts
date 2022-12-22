@@ -29,6 +29,21 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         paddingRight: 10
+    },
+    selectBox: {
+        borderColor: colors.black
+    },
+    selectInput: {
+        fontSize: 16
+    },
+    dropdownBox: {
+        borderColor: colors.black
+    },
+    dropdownItemText: {
+        fontSize: 16
+    },
+    dropdownItem: {
+        margin: 4
     }
 });
 
