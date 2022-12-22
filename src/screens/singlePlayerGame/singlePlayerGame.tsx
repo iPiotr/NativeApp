@@ -99,12 +99,18 @@ export default function Game(): ReactElement {
         }
     }, [state, turn]);
 
+    const info = difficulties
+        .filter(function (difficulty) {
+            return difficulty.key === settings?.difficulty;
+        })
+        .pop();
+
     return (
         <GradientBackground>
             <SafeAreaView style={styles.container}>
                 <View>
                     <AppText style={styles.difficulty}>
-                        Difficulty: {settings ? difficulties[settings.difficulty] : "Impossible"}
+                        Difficulty: {settings ? info?.value : "Impossible"}
                     </AppText>
                     <View style={styles.results}>
                         <View style={[styles.resultsBox, styles.shadow]}>

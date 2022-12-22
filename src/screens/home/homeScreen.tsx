@@ -22,7 +22,7 @@ export default function Home({ navigation }: HomeProps) {
                         style={styles.button}
                         title="Single Player"
                     />
-                    <Button style={styles.button} title="Multiplayer" />
+                    {/* <Button style={styles.button} title="Multiplayer" /> */}
                     <Button
                         onPress={() => {
                             navigation.navigate("Settings");

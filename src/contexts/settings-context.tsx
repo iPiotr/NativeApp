@@ -9,15 +9,15 @@ import React, {
 import { Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const difficulties = {
-    "1": "Easy",
-    "2": "Medium",
-    "3": "Hard",
-    "-1": "Impossible"
-};
+const difficulties = [
+    { key: "1", value: "Easy" },
+    { key: "2", value: "Medium" },
+    { key: "3", value: "Hard" },
+    { key: "-1", value: "Impossible" }
+];
 
 type SettingsType = {
-    difficulty: keyof typeof difficulties;
+    difficulty: "1" | "2" | "3" | "-1";
     vibrations: boolean;
     sounds: boolean;
 };

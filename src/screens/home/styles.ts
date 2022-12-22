@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     constainer: {
         alignItems: "center",
-        paddingTop: 50
+        paddingTop: 100
     },
     logo: {
         top: 20,
