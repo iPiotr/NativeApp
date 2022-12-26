@@ -4,6 +4,7 @@ import { GradientBackground, AppText } from "@components";
 import { colors } from "@utils";
 import { difficulties, useSettings } from "../../contexts/settings-context";
 import { SelectList } from "react-native-dropdown-select-list";
+import * as Haptics from "expo-haptics";
 
 import styles from "./styles";
 
@@ -53,6 +54,9 @@ export default function Settings(): ReactElement | null {
                         ios_backgroundColor={colors.darkRed}
                         value={settings.sounds}
                         onValueChange={() => {
+                            settings.sounds === false
+                                ? Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
+                                : "";
                             saveSettings("sounds", !settings.sounds);
                         }}
                     />
@@ -67,6 +71,9 @@ export default function Settings(): ReactElement | null {
                         value={settings.vibrations}
                         onValueChange={() => {
                             saveSettings("vibrations", !settings.vibrations);
+                            settings.vibrations === false
+                                ? Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
+                                : "";
                         }}
                     />
                 </View>
