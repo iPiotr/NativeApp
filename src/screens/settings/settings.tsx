@@ -1,4 +1,4 @@
-import { ScrollView, View, TouchableOpacity, Switch } from "react-native";
+import { ScrollView, View, Switch, Button, Linking } from "react-native";
 import React, { ReactElement } from "react";
 import { GradientBackground, AppText } from "@components";
 import { colors } from "@utils";
@@ -77,6 +77,12 @@ export default function Settings(): ReactElement | null {
                         }}
                     />
                 </View>
+
+                <Button
+                    onPress={() => Linking.openURL("mailto:ip.starzec@gmail.com")}
+                    title="Submit Feedback"
+                    color={colors.white}
+                />
             </ScrollView>
         </GradientBackground>
     );
