@@ -22,6 +22,7 @@ HomeScreen             |  GameScreen | SettingScreen
 - Single player game with diffrent difficulty levels
 - Sounds on/off
 - Vibrations on/off
+- Ability to change the language (Polish or English)
 
 
 ## Run Locally
