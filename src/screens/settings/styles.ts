@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
         marginBottom: 20
     },
     label: {
-        fontSize: 22
+        fontSize: 22,
+        color: colors.white
     },
     choices: {
         flexDirection: "row",
@@ -32,19 +33,22 @@ const styles = StyleSheet.create({
         paddingRight: 10
     },
     selectBox: {
-        borderColor: colors.black
+        borderColor: colors.white
     },
     selectInput: {
-        fontSize: 16
+        fontSize: 16,
+        color: colors.white
     },
     dropdownBox: {
-        borderColor: colors.black
+        borderColor: colors.white
     },
     dropdownItemText: {
-        fontSize: 16
+        fontSize: 16,
+        color: colors.white
     },
     dropdownItem: {
-        margin: 4
+        margin: 4,
+        color: colors.white
     }
 });
 

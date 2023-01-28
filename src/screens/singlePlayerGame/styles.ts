@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         marginTop: 80
     },
     difficulty: {
-        color: colors.black,
+        color: colors.white,
         fontSize: 22,
         textAlign: "center",
         marginBottom: 20
@@ -27,11 +27,11 @@ const styles = StyleSheet.create({
         borderRadius: 20
     },
     resultsTitle: {
-        color: colors.black,
+        color: colors.white,
         fontSize: 14
     },
     resultsCount: {
-        color: colors.black,
+        color: colors.white,
         fontSize: 20
     },
     modal: {

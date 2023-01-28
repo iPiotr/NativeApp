@@ -23,7 +23,8 @@ const navigatorOptions: StackNavigationOptions = {
     },
     headerTitleStyle: {
         fontFamily: "Amiko_700Bold",
-        fontSize: 20
+        fontSize: 20,
+        color: colors.white
     },
     headerBackTitleStyle: {
         fontFamily: "Amiko_700Bold",
