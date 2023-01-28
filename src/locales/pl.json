@@ -1,0 +1,29 @@
+{
+    "homeScreen": {
+        "settings": "Ustawienia",
+        "singlePlayer": "Jeden Gracz"
+    },
+    "gameScreen": {
+        "difficulty": "Poziom Trudności",
+        "wins": "Wygrane",
+        "draws": "Remisy",
+        "losses": "Porażki",
+        "win": "Wygrałeś!",
+        "lose": "Przegrałeś!",
+        "draw": "Remis!",
+        "playAgain": "Zagraj Ponownie!"
+    },
+    "difficulties": {
+        "Easy": "Łatwy",
+        "Medium": "Średni",
+        "Hard": "Trudny",
+        "Impossible": "Niemożliwy"
+    },
+    "settingsScreen": {
+        "difficultyLevel": "Poziom Trudności",
+        "sounds": "Dźwięki",
+        "vibrations": "Wibracje",
+        "language": "Język",
+        "submitFeedback": "Prześlij Opinię"
+    }
+}

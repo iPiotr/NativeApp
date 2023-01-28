@@ -4,6 +4,9 @@ import { GradientBackground, Board, AppText, Button } from "@components";
 import { isEmpty, BoardState, isTerminal, getBestMove, Cell, useSounds } from "../../utils";
 import { useSettings, difficulties } from "../../contexts/settings-context";
 
+import "../../lang";
+import { useTranslation } from "react-i18next";
+
 import styles from "./styles";
 
 const SCREEN_WIDTH = Dimensions.get("screen").width;
@@ -105,24 +108,34 @@ export default function Game(): ReactElement {
         })
         .pop();
 
+    const { t } = useTranslation();
+
     return (
         <GradientBackground>
             <SafeAreaView style={styles.container}>
                 <View>
                     <AppText style={styles.difficulty}>
-                        Difficulty: {settings ? info?.value : "Impossible"}
+                        {t("gameScreen.difficulty")}
+                        {": "}
+                        {t(`difficulties.${settings ? info?.value : "Impossible"}`)}
                     </AppText>
                     <View style={styles.results}>
                         <View style={[styles.resultsBox, styles.shadow]}>
-                            <AppText style={[styles.resultsTitle, styles.shadow]}>Wins</AppText>
+                            <AppText style={[styles.resultsTitle, styles.shadow]}>
+                                {t("gameScreen.wins")}
+                            </AppText>
                             <AppText style={styles.resultsCount}>{gamesCount.wins}</AppText>
                         </View>
                         <View style={[styles.resultsBox, styles.shadow]}>
-                            <AppText style={[styles.resultsTitle, styles.shadow]}>Draws</AppText>
+                            <AppText style={[styles.resultsTitle, styles.shadow]}>
+                                {t("gameScreen.draws")}
+                            </AppText>
                             <AppText style={styles.resultsCount}>{gamesCount.draws}</AppText>
                         </View>
                         <View style={[styles.resultsBox, styles.shadow]}>
-                            <AppText style={[styles.resultsTitle, styles.shadow]}>Losses</AppText>
+                            <AppText style={[styles.resultsTitle, styles.shadow]}>
+                                {t("gameScreen.losses")}
+                            </AppText>
                             <AppText style={styles.resultsCount}>{gamesCount.loses}</AppText>
                         </View>
                     </View>
@@ -139,15 +152,15 @@ export default function Game(): ReactElement {
                 {gameResult && (
                     <View style={[styles.modal, styles.shadow]}>
                         <AppText style={styles.modalTitle}>
-                            {getWinner(gameResult.winner) === "PLAYER" && "You Win!"}
-                            {getWinner(gameResult.winner) === "AI" && "You Lose!"}
-                            {getWinner(gameResult.winner) === "DRAW" && "Draw!"}
+                            {getWinner(gameResult.winner) === "PLAYER" && `${t("gameScreen.win")}`}
+                            {getWinner(gameResult.winner) === "AI" && `${t("gameScreen.lose")}`}
+                            {getWinner(gameResult.winner) === "DRAW" && `${t("gameScreen.draw")}`}
                         </AppText>
                         <Button
                             onPress={() => {
                                 newGame();
                             }}
-                            title="Play Again"
+                            title={t("gameScreen.playAgain")}
                         ></Button>
                     </View>
                 )}

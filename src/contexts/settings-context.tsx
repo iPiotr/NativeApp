@@ -16,16 +16,23 @@ const difficulties = [
     { key: "-1", value: "Impossible" }
 ];
 
+const languages = [
+    { key: "1", value: "en" },
+    { key: "2", value: "pl" }
+];
+
 type SettingsType = {
     difficulty: "1" | "2" | "3" | "-1";
     vibrations: boolean;
     sounds: boolean;
+    language: "1" | "2";
 };
 
 const defaultSettings: SettingsType = {
     difficulty: "-1",
     vibrations: true,
-    sounds: true
+    sounds: true,
+    language: "1"
 };
 
 type SettingsContextType = {
@@ -87,4 +94,4 @@ function SettingsProvider(props: { children: ReactNode }): ReactElement {
     );
 }
 
-export { useSettings, SettingsProvider, difficulties };
+export { useSettings, SettingsProvider, difficulties, languages };
