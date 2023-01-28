@@ -13,10 +13,9 @@ In the future, will be introduced a login feature to the app, allowing players t
 
 ## Screenshots
 
-
 HomeScreen             |  GameScreen | SettingScreen
 :-------------------------:|:-------------------------:|:-------------------------:
-![App Screenshot](https://i.imgur.com/ANk4fT2.png)  |  ![App Screenshot](https://i.imgur.com/SDPvcyu.png) | ![App Screenshot](https://i.imgur.com/zchIhTO.png)
+<img src="https://i.imgur.com/qjZnlrA.jpg" style="width:350px; height:600px"/>  |  <img src="https://i.imgur.com/wv8cIFD.jpg" style="width:350px; height:600px"/> | <img src="https://i.imgur.com/tsVTfaP.jpg" style="width:350px; height:600px"/>
 
 ## Features
 
