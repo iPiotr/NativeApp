@@ -5,11 +5,16 @@ import { StackNavigatorParams } from "@config/navigator";
 import { GradientBackground, Button } from "@components";
 import styles from "./styles";
 
+import "../../lang";
+import { useTranslation } from "react-i18next";
+
 type HomeProps = {
     navigation: StackNavigationProp<StackNavigatorParams, "Home">;
 };
 
 export default function Home({ navigation }: HomeProps) {
+    const { t } = useTranslation();
+
     return (
         <GradientBackground>
             <ScrollView contentContainerStyle={styles.constainer}>
@@ -20,7 +25,7 @@ export default function Home({ navigation }: HomeProps) {
                             navigation.navigate("SinglePlayerGame");
                         }}
                         style={styles.button}
-                        title="Single Player"
+                        title={"Single Player" || t("homeScreen.singlePlayer")}
                     />
                     {/* <Button style={styles.button} title="Multiplayer" /> */}
                     <Button
@@ -28,7 +33,7 @@ export default function Home({ navigation }: HomeProps) {
                             navigation.navigate("Settings");
                         }}
                         style={styles.button}
-                        title="Settings"
+                        title={"Settings" || t("homeScreen.settings")}
                     />
                 </View>
             </ScrollView>

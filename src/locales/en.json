@@ -1,0 +1,29 @@
+{
+    "homeScreen": {
+        "settings": "Settings",
+        "singlePlayer": "Single Player"
+    },
+    "gameScreen": {
+        "difficulty": "Difficulty",
+        "wins": "Wins",
+        "draws": "Draws",
+        "losses": "Losses",
+        "win": "You Win!",
+        "lose": "You lose!",
+        "draw": "Draw!",
+        "playAgain": "Play Again!"
+    },
+    "difficulties": {
+        "Easy": "Easy",
+        "Medium": "Medium",
+        "Hard": "Hard",
+        "Impossible": "Impossible"
+    },
+    "settingsScreen": {
+        "difficultyLevel": "Difficulty Level",
+        "sounds": "Sounds",
+        "vibrations": "Vibrations",
+        "language": "Language",
+        "submitFeedback": "Submit Feedback"
+    }
+}
